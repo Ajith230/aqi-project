@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+   <title>AQI Predictor</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+   <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css'  %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/animate/animate_form.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/animsition/css/animsition_form.min.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'vendor_form/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+   <link rel="stylesheet" type="text/css" href="{% static 'css/util_form.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/main_form.css' %}">
+<!--===============================================================================================-->
+</head>
+<body background="{% static 'images/bg-image.jpg' %}">
+
+
+   <div class="container-contact100">
+
+      <di class="wrap-contact100">
+         <div class="contact100-form-title" style="background-image: url({% static 'images/bg-04.jpg' %});">
+            <span class="contact100-form-title-1">
+               AQI Value
+            </span>
+
+            <span class="contact100-form-title-2">
+               INDIA AIRQUALITY ANALYSIS
+            </span>
+         </div>
+            <!--<a href="/data1" >&nbsp;   <u>Try with another values</u></a>-->
+            <br><br><br><br><center>The AQI Value<br><font size="20">
+            {{value}}
+      </font></center><br><br><br><br>
+            <a style="position:fixed;top:13px;left: 13px;color:Black;font-weight:900;background-color: #4CAF50;padding: 16px 32px;text-align: center;" href=homepage>homepage</font> </a>
+            <a style="position:fixed;top:13px;right: 23px;color:Black;background-color: #4CAF50;padding: 16px 32px;text-align: center;" href="logout">Logout ({{username}})</font> </a>
+
+         <center>
+
+                  <FORM name="wew" action="" method="POST">
+                     {% csrf_token %}
+                  <button style="background: none!important;border: none;padding: 0;font-family: arial, sans-serif;color: #069;text-decoration: underline;cursor: pointer;">
+                     want to know the AQI Range using</button>
+                     <select name="algorithm">
+                         <option value="lr">Logistic Regression</option>
+                         <option value="rfc">Random Forest Classifier</option>
+                     </select>
+                  </form>
+            <BR>
+               <a href="/data1" >&nbsp;   <u>Try with another values</u></a>
+            </center>
+         <br><br>
+      </div>
+   </div>
+
+
+
+   <div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form_form/bootstrap/js/popper.js' %}"></script>
+   <script src="{% static 'vendor_form/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form/daterangepicker/moment.min.js' %}"></script>
+   <script src="{% static 'vendor_form/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'vendor_form/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+   <script src="{% static 'js/map-custom.js' %}"></script>
+<!--===============================================================================================-->
+   <script src="{% static 'js/main_form.js' %}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-23581568-13');
+   </script>
+
+</body>
+</html>

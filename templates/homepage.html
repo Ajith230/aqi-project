@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <title>Homepage</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="{% static 'favicon.ico' %}" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate-css/animate.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+  <!--==========================
+  Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <!--<img class="" src="{% static 'img/logo.png' %}" alt="Imperial"> -->
+        </div>
+
+        <h1>AQI Predictor</h1>
+        <h2>We predict <span class="rotating">Air Quality Index Value, Air Quality Index Range</span></h2>
+        <div class="actions">
+          <a href="data1" class="btn-get-started">Looking For AQI</a>
+          <a href="data2" class="btn-services">Air Pollution Level</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <a href="#" class="back-to-top" style="position:absolute;top:10px;right: 10px;"><i class="fa fa-chevron-up">Logout</i></a>
+  <a style="position:fixed;top:13px;right: 23px;color:black; background-color: #4CAF50;padding: 16px 32px;text-align: center;" href="logout">Logout ({{username}})</font> </a>
+
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">About Us</h3>
+       <!--   <div class="section-title-divider"></div>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+        </div> -->
+      </div>
+    </div>
+
+          <p class="about-text">
+         As the largest growing industrial nation, India is producing record amounts of pollutants specifically Co2, pm2.5 etc and other harmful aerial contaminants. Air quality of a particular state or a country is a measure on the effect of pollutants on the respective regions, as per the Indian air quality standard pollutants are indexed in terms of their scale, these air quality indexes indicate the levels of major pollutants in the atmosphere. There are various atmospheric gases which cause pollution on our environment. Each pollution has individual index and scales at
+
+different levels. The major pollutants Such as(no2, so2, rspm, spm) indexes AQI is acquired,with this individual AQI, the data can be categorized based on the limits. We collected the data from the Indian database, which
+
+contains pollutant concentration occurring at various places across India. We start by calculating the individual index of the pollutant for every available data point and find their respective AQI for the region. We have designed
+
+a model to predict the air quality index of every available data points in the dataset, our model is capable of forecasting the air quality of India in any given concentrations. With this forecasting model, various knowledge about the data are extracted using various techniques to obtain heavily affected regions on a particular  region(cluster). This give more information and knowledge about the cause and seniority of the pollutants
+
+
+          </p>
+          <p class="about-text">
+            We used support vector regression (SVR), linear regression and random forest regression (RFR) to build regression models for predicting the Air Quality Index (AQI) in india based  nitrogen oxides (NO2),Sulfur dioxide(S02)  Suspended Particulate Matter(spm),Respirable suspended particulate matter (RSPM ) concentration . Also classification logistic regression random forest classification are used to predict which class(healthy,unhealthy,poor etc….)  .The root-mean-square error (RMSE) and  correlation coefficient  were used to evaluate the performance of the regression models. Experimental results showed that the RFR-based model performed better in the prediction of the AQI,  This work also illustrates that combining machine learning with air quality prediction is an efficient and convenient way to solve some related environment problems.
+          </p>
+          <p class="about-text">
+            We developed a model to predict the air quality index based on historical data of previous years .we improve the efficiency of the model by applying cost Estimation for our predictive Problem. Our model will be capable for successfully predicting the air quality index of a total county or any state or any bounded region provided with the historical data of pollutant concentration. In our model by implementing the proposed parameter reducing formulations, we achieved better performance than the standard regression models. our model has 99% accuracy on predicting the current available dataset on predicting the air quality index .
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT CLOSED -->
+  <!-- Required JavaScript Libraries -->
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/morphext/morphext.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/stickyjs/sticky.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.js' %}"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="{% static 'js/custom.js' %}"></script>
+
+  <script src="{% static 'contactform/contactform.js' %}"></script>
+
+
+</body>
+
+</html>
